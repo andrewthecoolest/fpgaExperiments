@@ -21,6 +21,10 @@ module dec2to4_testbench ();
       en = i[0];
       testin_0 = i[2:1];  // take only last 2 bits of int i
       #200;
+
+      if (decoded !== (en ? (4'b0001 << testin_0) : 4'b0000))  // selftest
+        $display("FAIL: en=%b a=%b decoded=%b", en, testin_0, decoded);
+
     end
 
     $finish;

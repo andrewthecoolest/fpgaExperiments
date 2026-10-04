@@ -1,3 +1,5 @@
+// 4 nots, 8 ands
+
 module dec2to4 (
     input wire [1:0] a,
     input wire en,
