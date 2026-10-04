@@ -1,6 +1,8 @@
 # fpgaExperiments
 
-Small FPGA experiments in Verilog, built and run on a Digilent Basys3 (Artix-7).
+I'm going through "FPGA prototyping by Verilog examples" by Pong P. Chu
+
+These are the FPGA experiments of the book in Verilog, built and run on a Digilent Basys3 (Artix-7).
 
 | Directory | What it does |
 |---|---|
