@@ -5,10 +5,14 @@ module gt_testbench;
   reg [1:0] test_in0, test_in1;
   wire test_out;
 
-  gt uut (.a(test_in0), .b(test_in1), .agtb(test_out));
+  gt uut (.a(test_in0), .b(test_in1), .agtb(test_out)); // unit under test is gt module
 
   initial
   begin
+    $dumpfile("gt.vcd");                                  // make the waveform file
+    $dumpvars(0, gt_testbench);                           // capture all signals here and in instanciated
+
+    // test starts here
     test_in0 = 2'b00;
     test_in1 = 2'b00;
     # 200;
@@ -73,7 +77,7 @@ module gt_testbench;
     test_in1 = 2'b11;
     # 200;
 
-    $stop;
+    $finish;
   end
 endmodule
 
